@@ -46,7 +46,7 @@ def get_client_city(ip_address):
     }
     try:
         response = requests.get(url, params=params).json()
-        city = response.get("city", "Lagos")  # Default to Lagos if city not found
+        city = response.get("city", "Newyork")  # Default to Newyork if city not found
         loc = response.get('loc', '0,0')  # Default to '0,0' if loc not found
         longitude, latitude = loc.split(',')
         
